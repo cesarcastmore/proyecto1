@@ -67,6 +67,104 @@ export class AppComponent implements OnInit {
     resultado.innerHTML = usuario.getNombre();
 
 
+    for (let i = 0; i < arreglo2.length; i++) {
+      console.log(arreglo2[i]);
+    }
+
+    for (let valor of arreglo2) {
+      console.log(valor);
+    }
+
+
+    let arreglo4: any[] = [{
+      nombre: "cesar",
+      apellido: "castillo"
+    }, {
+      nombre: "carlos",
+      apellido: "rodriguez"
+    }]
+
+    for (let obj of arreglo4) {
+      console.log(obj);
+      console.log(obj.nombre);
+
+    }
+
+    arreglo4.forEach((item: any): void => {
+      console.log(item)
+    })
+
+    //filter, map, find, sort
+
+    let nombres: string[] = arreglo4.map(item => {
+      return item.nombre;
+
+    });
+
+    console.log("NOMBRES", nombres);
+
+    console.log(arreglo4[0].direccion);
+
+    if (!arreglo4[0].direccion) {
+      console.log("entro");
+    }
+
+    if ([].length) {
+      console.log("estoy vacio");
+    }
+
+    if (["a", "b"].length) {
+      console.log("ya tengo algo");
+    }
+
+    let valor_1: string;
+    let valor_2: number = 1;
+
+    if (valor_1 === undefined) {
+      console.log("no tengo nada");
+    }
+
+    let usuario_cesar = {
+      nombre: "cesar",
+      apellido: "castillo"
+    };
+
+    for (let atributo in usuario_cesar) {
+      console.log("atributo", atributo);
+      console.log("valor", usuario_cesar[atributo]);
+    }
+
+
+    let lista_usuarios: any[] = [{
+      nombre: "cesar",
+      apellido: "castillo"
+    }, {
+      nombre: "carlos",
+      apellido: "rodriguez"
+    }, {
+      nombre: "benito",
+      apellido: "juarez"
+    }, {
+      nombre: "miguel",
+      apellido: "hidalgo"
+    }, {
+      nombre: "juan",
+      apellido: "escutia"
+    }];
+
+
+    let miguel_hidalgo= lista_usuarios.find(item=>{
+    	return item.nombre == "miguel" && item.apellido=="hidalgo"; 
+    });
+
+    console.log("MIGUEL", miguel_hidalgo);
+
+    //">", "<", ">=", "<="
+
+
+
+
+
 
 
 
