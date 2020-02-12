@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Articulo } from './modelos/articulo';
 
 @Component({
   selector: 'app-root',
@@ -153,11 +154,22 @@ export class AppComponent implements OnInit {
     }];
 
 
-    let miguel_hidalgo= lista_usuarios.find(item=>{
-    	return item.nombre == "miguel" && item.apellido=="hidalgo"; 
+    let miguel_hidalgo = lista_usuarios.find(item => {
+      return item.nombre == "miguel" && item.apellido == "hidalgo";
     });
 
     console.log("MIGUEL", miguel_hidalgo);
+
+
+    let articulo: Articulo = {
+      nombre: "refresco",
+      precio: 12.32
+    };
+
+    articulo.precio= 10.50;
+
+
+
 
     //">", "<", ">=", "<="
 
