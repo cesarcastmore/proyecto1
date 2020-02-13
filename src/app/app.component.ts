@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Articulo } from './modelos/articulo';
+
+import { Alcohol, Articulo, Fruta, Verdura, Impuestos} from './modelos';
 
 @Component({
   selector: 'app-root',
@@ -166,7 +167,16 @@ export class AppComponent implements OnInit {
       precio: 12.32
     };
 
-    articulo.precio= 10.50;
+    articulo.precio = 10.50;
+
+    let alcohol: Alcohol=new Alcohol(250, "Tequila");
+    alcohol.porcentaje=0.3;
+
+    let porcentaje= alcohol.getPorcentajeAlcohol();
+    
+
+
+
 
 
 
