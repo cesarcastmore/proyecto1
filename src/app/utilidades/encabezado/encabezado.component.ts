@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncabezadoComponent implements OnInit {
 
+	public titulo: string= "BLanca nieves";
+
+	public codigo: number=123; 
+
+	public clase:string= "fondo";
+
+
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  public getStatus(): string{
+  	return "Nombre";
+  }
+
+  public getTotal(importe:  number){
+  	return importe * 1.16;
   }
 
 }
