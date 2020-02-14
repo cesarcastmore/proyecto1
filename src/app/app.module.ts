@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { UtilidadesModule } from './utilidades/utilidades.module';
 import { AdministracionModule } from './administracion/administracion.module';
 import { ModulosExternosComponent } from './paginas/modulos-externos/modulos-externos.component';
+import { VistaBootstrapComponent } from './paginas/vista-bootstrap/vista-bootstrap.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModulosExternosComponent
+    ModulosExternosComponent,
+    VistaBootstrapComponent
   ],
   imports: [
     BrowserModule,
