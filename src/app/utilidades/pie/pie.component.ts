@@ -12,10 +12,17 @@ export class PieComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+
+  	/*
+sskfjsdfkjskfjsdkdfj
+  	*/
+
+
     setTimeout(() => {
       this.precio = 15.33;
 
     }, 3000);
+
 
 
   }
