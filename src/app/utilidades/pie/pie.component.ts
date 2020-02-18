@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PieComponent implements OnInit {
 
-  constructor() { }
+  precio: number = 12.33;
+
+  constructor() {}
 
   ngOnInit() {
+    setTimeout(() => {
+      this.precio = 15.33;
+
+    }, 3000);
+
+
   }
 
 }

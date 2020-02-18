@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CuerpoComponent implements OnInit {
 
+	descripcion: string="Estas es las descripcion del producto";
+
   constructor() { }
 
   ngOnInit() {
