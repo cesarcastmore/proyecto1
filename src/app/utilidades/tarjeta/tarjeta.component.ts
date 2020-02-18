@@ -18,4 +18,9 @@ export class TarjetaComponent implements OnInit {
 
   ngOnInit() {}
 
+
+  public addImporte(importe: number){
+  	console.log(importe);
+  }
+
 }

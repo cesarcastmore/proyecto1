@@ -2,5 +2,5 @@
 <div class="card text-center">
 	<app-encabezado [nombre]="articulo.nombre"></app-encabezado>
 	<app-cuerpo></app-cuerpo>
-	<app-pie></app-pie>
+	<app-pie (obtenerImporte)="addImporte($event)" [precio]="articulo.precio"></app-pie>
 </div>

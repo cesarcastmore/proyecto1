@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-pie',
@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class PieComponent implements OnInit {
 
   precio: number = 12.33;
+  cantidad: number=1;
+
+  importe: number=0;
+
+  @Output('obtenerImporte') onImporte: EventEmitter<number>= new EventEmitter<number>();
 
   constructor() {}
 
@@ -25,6 +30,18 @@ sskfjsdfkjskfjsdkdfj
 
 
 
+  }
+
+  calculoImporte(event: any){
+  	console.log(event);
+  	this.importe = event.target.value*1.16;
+
+  }
+
+  calculaTotal(){
+  	//alert("Ya estoy aqui");
+  	let total = this.importe* this.cantidad;
+  	this.onImporte.emit(total);
   }
 
 }
