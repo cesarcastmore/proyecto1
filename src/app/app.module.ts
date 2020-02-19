@@ -9,6 +9,7 @@ import { ModulosExternosComponent } from './paginas/modulos-externos/modulos-ext
 import { VistaBootstrapComponent } from './paginas/vista-bootstrap/vista-bootstrap.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { VistaTarjetaComponent } from './paginas/vista-tarjeta/vista-tarjeta.component';
+import { VistaCicloComponent } from './paginas/vista-ciclo/vista-ciclo.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { VistaTarjetaComponent } from './paginas/vista-tarjeta/vista-tarjeta.com
     AppComponent,
     ModulosExternosComponent,
     VistaBootstrapComponent,
-    VistaTarjetaComponent
+    VistaTarjetaComponent,
+    VistaCicloComponent
   ],
   imports: [
     BrowserModule,
