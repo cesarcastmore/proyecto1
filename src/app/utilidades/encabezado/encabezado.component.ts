@@ -1,5 +1,5 @@
-import { Component, OnInit , Input } from '@angular/core';
-
+import { Component, OnInit, Input, OnChanges, OnDestroy } from '@angular/core';
+//https://angular.io/guide/lifecycle-hooks
 
 @Component({
   selector: 'app-encabezado',
@@ -8,26 +8,31 @@ import { Component, OnInit , Input } from '@angular/core';
 })
 export class EncabezadoComponent implements OnInit {
 
-	@Input('nombre') titulo: string= "BLanca nieves";
+  @Input('nombre') titulo: string;
 
-	public codigo: number=123; 
+  public codigo: number = 123;
 
-	public clase:string= "fondo";
+  public clase: string = "fondo";
 
 
 
-  constructor() { }
+  constructor() {
+    console.log("CONTRUCTOR",this.titulo)
+  }
 
   ngOnInit() {
+    console.log("ngonInit", this.titulo);
+
+    /*Inicializar variables, Inicializar el API, hacer una conexion o traes valores como cookies*/
   }
 
 
-  public getStatus(): string{
-  	return "Nombre";
+  public getStatus(): string {
+    return "Nombre";
   }
 
-  public getTotal(importe:  number){
-  	return importe * 1.16;
+  public getTotal(importe: number) {
+    return importe * 1.16;
   }
 
 }
