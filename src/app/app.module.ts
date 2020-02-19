@@ -11,6 +11,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { VistaTarjetaComponent } from './paginas/vista-tarjeta/vista-tarjeta.component';
 import { VistaCicloComponent } from './paginas/vista-ciclo/vista-ciclo.component';
 import { VistaCondiccionComponent } from './paginas/vista-condiccion/vista-condiccion.component';
+import { VistaSwitchComponent } from './paginas/vista-switch/vista-switch.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { VistaCondiccionComponent } from './paginas/vista-condiccion/vista-condi
     VistaBootstrapComponent,
     VistaTarjetaComponent,
     VistaCicloComponent,
-    VistaCondiccionComponent
+    VistaCondiccionComponent,
+    VistaSwitchComponent
   ],
   imports: [
     BrowserModule,
