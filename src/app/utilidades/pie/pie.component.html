@@ -1,12 +1,14 @@
 <div class="card-footer text-muted fondo">
   {{precio}}
-  <label> Precio</label>
-  <input type="number" [value]="precio" (change)="calculoImporte($event)">
-  <br>
-  <label> Cantidad</label>
-  <input type="number" [value]="cantidad" (change)="cantidad = $event.target.value">
-  <br>
-  <label> Este es el importe {{ importe }}</label>
-  <button (click)="calculaTotal()">Importe Total</button>
+  <div class="form-group">
+    <label> Precio</label>
+    <input type="number" [value]="precio" (change)="calculoImporte($event)" class="form-control">
+  </div>
+  <div class="form-group">
+    <label> Cantidad</label>
+    <input type="number" [value]="cantidad" (change)="cantidad = $event.target.value" class="form-control">
+  </div>
+  <div class="form-group"><label> Este es el importe {{ importe }}</label></div>
+  <button type="button" class="btn btn-primary" (click)="calculaTotal()">Importe Total</button>
   <button type="button" class="btn btn-primary" (click)="seleccionar()">Escoger</button>
 </div>
