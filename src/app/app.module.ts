@@ -12,6 +12,7 @@ import { VistaTarjetaComponent } from './paginas/vista-tarjeta/vista-tarjeta.com
 import { VistaCicloComponent } from './paginas/vista-ciclo/vista-ciclo.component';
 import { VistaCondiccionComponent } from './paginas/vista-condiccion/vista-condiccion.component';
 import { VistaSwitchComponent } from './paginas/vista-switch/vista-switch.component';
+import { VistaClaseComponent } from './paginas/vista-clase/vista-clase.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { VistaSwitchComponent } from './paginas/vista-switch/vista-switch.compon
     VistaTarjetaComponent,
     VistaCicloComponent,
     VistaCondiccionComponent,
-    VistaSwitchComponent
+    VistaSwitchComponent,
+    VistaClaseComponent
   ],
   imports: [
     BrowserModule,
