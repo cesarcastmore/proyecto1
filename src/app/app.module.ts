@@ -15,6 +15,8 @@ import { VistaSwitchComponent } from './paginas/vista-switch/vista-switch.compon
 import { VistaClaseComponent } from './paginas/vista-clase/vista-clase.component';
 import { VistaEstiloComponent } from './paginas/vista-estilo/vista-estilo.component';
 import { VistaDecimalPipeComponent } from './paginas/vista-decimal-pipe/vista-decimal-pipe.component';
+import { TransformarPipe } from './pipes/transformar.pipe';
+import { VistaCustomizadaPipeComponent } from './paginas/vista-customizada-pipe/vista-customizada-pipe.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { VistaDecimalPipeComponent } from './paginas/vista-decimal-pipe/vista-de
     VistaSwitchComponent,
     VistaClaseComponent,
     VistaEstiloComponent,
-    VistaDecimalPipeComponent
+    VistaDecimalPipeComponent,
+    TransformarPipe,
+    VistaCustomizadaPipeComponent
   ],
   imports: [
     BrowserModule,

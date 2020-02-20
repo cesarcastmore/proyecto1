@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label>Empieza a escribir</label>
+  <textarea class="form-control" rows="3" [value]="descripcion" (change)="descripcion=$event.target.value"></textarea>
+  <label>La transformacion es:</label>
+  <label> {{descripcion | transformar: 'Mayuscula'}}</label>
+</div>
