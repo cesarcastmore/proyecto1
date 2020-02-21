@@ -17,6 +17,11 @@ import { VistaEstiloComponent } from './paginas/vista-estilo/vista-estilo.compon
 import { VistaDecimalPipeComponent } from './paginas/vista-decimal-pipe/vista-decimal-pipe.component';
 import { TransformarPipe } from './pipes/transformar.pipe';
 import { VistaCustomizadaPipeComponent } from './paginas/vista-customizada-pipe/vista-customizada-pipe.component';
+import { VistaRutasAnidadasComponent } from './paginas/vista-rutas-anidadas/vista-rutas-anidadas.component';
+import { VistaOpcion1Component } from './paginas/vista-opcion1/vista-opcion1.component';
+import { VistaOpcion2Component } from './paginas/vista-opcion2/vista-opcion2.component';
+import { VistaOpcion3Component } from './paginas/vista-opcion3/vista-opcion3.component';
+import { VistaOpcion4Component } from './paginas/vista-opcion4/vista-opcion4.component';
 
 
 @NgModule({
@@ -32,7 +37,12 @@ import { VistaCustomizadaPipeComponent } from './paginas/vista-customizada-pipe/
     VistaEstiloComponent,
     VistaDecimalPipeComponent,
     TransformarPipe,
-    VistaCustomizadaPipeComponent
+    VistaCustomizadaPipeComponent,
+    VistaRutasAnidadasComponent,
+    VistaOpcion1Component,
+    VistaOpcion2Component,
+    VistaOpcion3Component,
+    VistaOpcion4Component
   ],
   imports: [
     BrowserModule,
