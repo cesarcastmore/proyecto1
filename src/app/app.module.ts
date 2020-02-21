@@ -22,6 +22,7 @@ import { VistaOpcion1Component } from './paginas/vista-opcion1/vista-opcion1.com
 import { VistaOpcion2Component } from './paginas/vista-opcion2/vista-opcion2.component';
 import { VistaOpcion3Component } from './paginas/vista-opcion3/vista-opcion3.component';
 import { VistaOpcion4Component } from './paginas/vista-opcion4/vista-opcion4.component';
+import { VistaLoginComponent } from './paginas/vista-login/vista-login.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { VistaOpcion4Component } from './paginas/vista-opcion4/vista-opcion4.com
     VistaOpcion1Component,
     VistaOpcion2Component,
     VistaOpcion3Component,
-    VistaOpcion4Component
+    VistaOpcion4Component,
+    VistaLoginComponent
   ],
   imports: [
     BrowserModule,
