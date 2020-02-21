@@ -1,12 +1,16 @@
-<app-vista-condiccion></app-vista-condiccion>
-<div id="resultado"> </div>
-<app-agregar-usuario></app-agregar-usuario>
-<app-vista-tarjeta></app-vista-tarjeta>
-<app-vista-bootstrap></app-vista-bootstrap>
-<app-modulos-externos></app-modulos-externos>
-<app-vista-ciclo></app-vista-ciclo>
-<app-vista-switch></app-vista-switch>
-<app-vista-clase></app-vista-clase>
-<app-vista-estilo></app-vista-estilo>
-<app-vista-decimal-pipe></app-vista-decimal-pipe>
-<app-vista-customizada-pipe></app-vista-customizada-pipe>
+<div class="row">
+  <div class="col-md-3">
+    <ul class="list-group">
+      <a class="list-group-item" routerLink="/componentes/componentes">Componentes</a>
+      <a class="list-group-item" routerLink="/directivas/ciclo">Ciclo</a>
+      <a class="list-group-item" routerLink="/directivas/switch">Switch</a>
+      <a class="list-group-item" routerLink="/directivas/clase">Clase</a>
+      <a class="list-group-item" routerLink="/directivas/estilo">Estilo</a>
+      <a class="list-group-item" routerLink="modulos/modulos_externos">Modulos Externos</a>
+      <a class="list-group-item" routerLink="modulos/bootstrap">Boostrap</a>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>
