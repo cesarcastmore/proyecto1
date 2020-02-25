@@ -15,6 +15,9 @@ import { VistaOpcion3Component } from './paginas/vista-opcion3/vista-opcion3.com
 import { VistaOpcion4Component } from './paginas/vista-opcion4/vista-opcion4.component';
 
 import { VistaLoginComponent } from './paginas/vista-login/vista-login.component';
+import { VistaIdentificadorComponent } from './paginas/vista-identificador/vista-identificador.component';
+import { VistaAgregarUsuarioComponent } from './paginas/vista-agregar-usuario/vista-agregar-usuario.component';
+import { VistaUsuariosComponent } from './paginas/vista-usuarios/vista-usuarios.component';
 
 const routes: Routes = [{
     path: '',
@@ -48,6 +51,15 @@ const routes: Routes = [{
   }, {
     path: 'directivas/switch',
     component: VistaSwitchComponent
+  }, {
+    path: 'productos/:id/:identificador',
+    component: VistaIdentificadorComponent
+  }, {
+    path: 'usuarios',
+    component: VistaUsuariosComponent
+  }, {
+    path: 'usuarios/agregar',
+    component: VistaAgregarUsuarioComponent
   }, {
     path: 'rutas/anidadas',
     component: VistaRutasAnidadasComponent,

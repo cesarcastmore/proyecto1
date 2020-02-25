@@ -23,6 +23,9 @@ import { VistaOpcion2Component } from './paginas/vista-opcion2/vista-opcion2.com
 import { VistaOpcion3Component } from './paginas/vista-opcion3/vista-opcion3.component';
 import { VistaOpcion4Component } from './paginas/vista-opcion4/vista-opcion4.component';
 import { VistaLoginComponent } from './paginas/vista-login/vista-login.component';
+import { VistaIdentificadorComponent } from './paginas/vista-identificador/vista-identificador.component';
+import { VistaAgregarUsuarioComponent } from './paginas/vista-agregar-usuario/vista-agregar-usuario.component';
+import { VistaUsuariosComponent } from './paginas/vista-usuarios/vista-usuarios.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { VistaLoginComponent } from './paginas/vista-login/vista-login.component
     VistaOpcion2Component,
     VistaOpcion3Component,
     VistaOpcion4Component,
-    VistaLoginComponent
+    VistaLoginComponent,
+    VistaIdentificadorComponent,
+    VistaAgregarUsuarioComponent,
+    VistaUsuariosComponent
   ],
   imports: [
     BrowserModule,

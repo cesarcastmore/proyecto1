@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of usuarios">
+      <th scope="row">{{ u.id }}</th>
+      <td>{{ u.nombre }}</td>
+      <td>{{ u.apellido }}</td>
+      <td><button type="button" class="btn btn-success">Editar</button>
+        <button type="button" class="btn btn-danger" (click)="borrar(u.id)">Borrar</button></td>
+    </tr>
+  </tbody>
+</table>
