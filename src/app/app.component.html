@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-3" [hidden]="!authService.activo">
     <ul class="list-group">
       <a class="list-group-item" routerLink="/componentes/componentes">Componentes</a>
       <a class="list-group-item" routerLink="/directivas/ciclo">Ciclo</a>
@@ -12,7 +12,16 @@
       <a class="list-group-item" routerLink="usuarios">Usuarios</a>
     </ul>
   </div>
-  <div class="col-md-9">
+  <div class="col-md-9" [ngClass]="{'col-md-9':authService.activo, 'col-md-12': !authService.activo }">
+
+
+    <ul class="nav justify-content-end" [hidden]="!authService.activo">
+      <li class="nav-item">
+        <button class="btn btn-success" (click)="authService.salir()">Salir</button>
+      </li>
+    </ul>
+
+    
     <router-outlet></router-outlet>
   </div>
 </div>

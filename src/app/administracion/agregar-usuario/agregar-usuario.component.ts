@@ -32,6 +32,7 @@ export class AgregarUsuarioComponent implements OnInit {
     console.log("Validez", this.usuario.valid);
 
     this.esValido = this.usuario.valid;
+    
 
     this.usuario.reset();
     this.router.navigateByUrl("/usuarios");;

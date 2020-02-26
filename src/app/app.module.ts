@@ -26,7 +26,8 @@ import { VistaLoginComponent } from './paginas/vista-login/vista-login.component
 import { VistaIdentificadorComponent } from './paginas/vista-identificador/vista-identificador.component';
 import { VistaAgregarUsuarioComponent } from './paginas/vista-agregar-usuario/vista-agregar-usuario.component';
 import { VistaUsuariosComponent } from './paginas/vista-usuarios/vista-usuarios.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -57,9 +58,10 @@ import { VistaUsuariosComponent } from './paginas/vista-usuarios/vista-usuarios.
     AppRoutingModule,
     UtilidadesModule,
     AdministracionModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

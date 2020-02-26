@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Alcohol, Articulo, Fruta, Verdura, Impuestos} from './modelos';
+import { AuthService} from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,13 @@ import { Alcohol, Articulo, Fruta, Verdura, Impuestos} from './modelos';
 export class AppComponent implements OnInit {
   title = 'proyecto1';
 
+  constructor(private authService: AuthService){
+
+  }
+
   ngOnInit() {
+
+    this.authService.esActivo();
 
     let nombre = "cesar";
     let nombre2: string = "cesar2";
@@ -182,9 +189,6 @@ export class AppComponent implements OnInit {
 
 
     //">", "<", ">=", "<="
-
-
-
 
 
 
