@@ -10,18 +10,15 @@
       <a class="list-group-item" routerLink="modulos/bootstrap">Boostrap</a>
       <a class="list-group-item" routerLink="rutas/anidadas">Rutas Anidadas</a>
       <a class="list-group-item" routerLink="usuarios">Usuarios</a>
+      <a class="list-group-item" routerLink="observador">Observador</a>
     </ul>
   </div>
   <div class="col-md-9" [ngClass]="{'col-md-9':authService.activo, 'col-md-12': !authService.activo }">
-
-
     <ul class="nav justify-content-end" [hidden]="!authService.activo">
       <li class="nav-item">
         <button class="btn btn-success" (click)="authService.salir()">Salir</button>
       </li>
     </ul>
-
-    
     <router-outlet></router-outlet>
   </div>
 </div>

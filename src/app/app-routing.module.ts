@@ -18,6 +18,7 @@ import { VistaLoginComponent } from './paginas/vista-login/vista-login.component
 import { VistaIdentificadorComponent } from './paginas/vista-identificador/vista-identificador.component';
 import { VistaAgregarUsuarioComponent } from './paginas/vista-agregar-usuario/vista-agregar-usuario.component';
 import { VistaUsuariosComponent } from './paginas/vista-usuarios/vista-usuarios.component';
+import { VistaObservadorComponent} from './paginas/vista-observador/vista-observador.component';
 
 const routes: Routes = [{
     path: '',
@@ -80,6 +81,11 @@ const routes: Routes = [{
       path: 'opcion-4',
       component: VistaOpcion4Component
     }]
+  },
+
+   {
+    path: 'observador',
+    component: VistaObservadorComponent
   }
 ];
 
