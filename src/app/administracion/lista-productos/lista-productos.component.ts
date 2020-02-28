@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../modelos/usuario';
+import { UsuariosService } from '../servicios/usuarios.service';
 
 @Component({
   selector: 'app-lista-productos',
@@ -8,25 +9,15 @@ import { Usuario } from '../../modelos/usuario';
 })
 export class ListaProductosComponent implements OnInit {
 
-  public usuarios: Usuario[] = [{
-    id: '1',
-    nombre: 'Miguel',
-    apellido: 'Hidalgo'
+  public usuarios: Usuario[] =[];
 
-  }, {
-    id: '2',
-    nombre: 'Benito',
-    apellido: 'Juarez'
-
-  }, {
-    id: '3',
-    nombre: 'Pofirio',
-    apellido: 'Diaz'
-  }]
-
-  constructor() {}
+  constructor(private usuariosService: UsuariosService) {}
 
   ngOnInit() {
+
+    this.usuariosService.obtenerTodos().subscribe(resultado=>{
+      this.usuarios= resultado;
+    })
 
 
 
@@ -48,6 +39,6 @@ export class ListaProductosComponent implements OnInit {
   }
 
 
-  
+
 
 }

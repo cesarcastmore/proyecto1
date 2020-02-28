@@ -29,6 +29,7 @@ import { VistaUsuariosComponent } from './paginas/vista-usuarios/vista-usuarios.
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { VistaObservadorComponent } from './paginas/vista-observador/vista-observador.component';
+import { VistaEditarUsuarioComponent } from './paginas/vista-editar-usuario/vista-editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { VistaObservadorComponent } from './paginas/vista-observador/vista-obser
     VistaIdentificadorComponent,
     VistaAgregarUsuarioComponent,
     VistaUsuariosComponent,
-    VistaObservadorComponent
+    VistaObservadorComponent,
+    VistaEditarUsuarioComponent
   ],
   imports: [
     BrowserModule,

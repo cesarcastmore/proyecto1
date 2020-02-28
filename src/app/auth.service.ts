@@ -39,7 +39,7 @@ export class AuthService {
 
     if (usuario.usuario == 'cesar.cast.more@gmail.com') {
       this.activo = true;
-      this.router.navigateByUrl("/componentes/componentes");
+      //this.router.navigateByUrl("/componentes/componentes");
 
     } else {
       this.router.navigateByUrl("/login");
