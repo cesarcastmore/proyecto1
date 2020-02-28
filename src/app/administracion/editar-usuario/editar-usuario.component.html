@@ -1,7 +1,8 @@
 <div *ngIf="!esValido" class="alert alert-danger" role="alert">
   El campo de nombre es requerido
 </div>
-<div [formGroup]="usuario">
+<div [formGroup]="usuarioForm">
+  <input type="text" class="form-control" formControlName="id" hidden=true>
   <div class="form-group">
     <label>Nombre</label>
     <input type="text" class="form-control" formControlName="nombre">
@@ -11,5 +12,5 @@
     <input type="text" class="form-control" formControlName="apellido">
   </div>
 </div>
-{{usuario.value | json }}
-<button type="button" class="btn btn-primary" (click)="guardar()">Primary</button>
+<!--{{usuarioForm.value | json }}!-->
+<button type="button" class="btn btn-primary" (click)="actualizar()">Actualizar</button>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsuariosService } from '../servicios/usuarios.service';
+
 
 @Component({
   selector: 'app-agregar-usuario',
@@ -17,7 +19,8 @@ export class AgregarUsuarioComponent implements OnInit {
   });
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    private usuarioService: UsuariosService) {
 
   }
 
@@ -32,10 +35,16 @@ export class AgregarUsuarioComponent implements OnInit {
     console.log("Validez", this.usuario.valid);
 
     this.esValido = this.usuario.valid;
-    
 
-    this.usuario.reset();
-    this.router.navigateByUrl("/usuarios");;
+    this.usuarioService.crear(this.usuario.value)
+      .subscribe(usuario => {
+
+        this.usuario.reset();
+        this.router.navigateByUrl("/usuarios");
+
+      });
+
+
 
     /*this.usuario.patchValue({
       nombre: 'Cesar',

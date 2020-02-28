@@ -12,7 +12,7 @@
       <th scope="row">{{ u.id }}</th>
       <td>{{ u.nombre }}</td>
       <td>{{ u.apellido }}</td>
-      <td><button type="button" class="btn btn-success">Editar</button>
+      <td><button type="button" class="btn btn-success" (click)="editar(u.id)">Editar</button>
         <button type="button" class="btn btn-danger" (click)="borrar(u.id)">Borrar</button></td>
     </tr>
   </tbody>

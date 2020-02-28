@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { UsuariosService } from '../servicios/usuarios.service';
+import { Usuario } from '../../modelos/usuario';
 
 @Component({
   selector: 'app-editar-usuario',
@@ -11,38 +13,42 @@ export class EditarUsuarioComponent implements OnInit {
 
   public esValido: boolean = true;
 
-  public usuario: FormGroup = new FormGroup({
+  public usuarioForm: FormGroup = new FormGroup({
     nombre: new FormControl('', [Validators.required]),
-    apellido: new FormControl('Castillo')
+    apellido: new FormControl('')
   });
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private usuariosService: UsuariosService) {
 
   }
 
   ngOnInit() {
+    let id: string = this.activatedRoute.snapshot.params['id'];
+
+    this.usuariosService.obtener(id).subscribe(resultado => {
+      this.usuarioForm.patchValue(resultado);
+
+    });
+
+
 
   }
 
-  public guardar() {
+  public actualizar() {
 
+    let usuario: Usuario = this.usuarioForm.value;
+    usuario.id = this.activatedRoute.snapshot.params['id'];
 
-    console.log("USUARIO", this.usuario.value);
-    console.log("Validez", this.usuario.valid);
-
-    this.esValido = this.usuario.valid;
-
-
-    this.usuario.reset();
-    this.router.navigateByUrl("/usuarios");;
-
-    /*this.usuario.patchValue({
-      nombre: 'Cesar',
-      apellido: 'Castillo'
-    })*/
-
+    this.usuariosService.actualizar(usuario)
+      .subscribe(usuario => {
+        this.router.navigateByUrl("/usuarios");
+      })
 
   }
+
+
 
 }
