@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../modelos/usuario';
 import { UsuariosService } from '../servicios/usuarios.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
+import { SpinnerService } from '../../spinner.service';
 
 @Component({
   selector: 'app-lista-productos',
@@ -12,14 +14,26 @@ export class ListaProductosComponent implements OnInit {
 
   public usuarios: Usuario[] = [];
 
+  buscarForm: FormGroup = new FormGroup({
+    termino: new FormControl('')
+  })
+
   constructor(private usuariosService: UsuariosService,
-    private router: Router) {}
+    private router: Router, public spinnerService: SpinnerService) {}
 
   ngOnInit() {
 
+    this.spinnerService.activo = true;
+
     this.usuariosService.obtenerTodos().subscribe(resultado => {
+      this.spinnerService.activo = false;
       this.usuarios = resultado;
     })
+
+    this.buscarForm.valueChanges.subscribe(valor => {
+      console.log(valor);
+
+    });
 
   }
 

@@ -10,7 +10,7 @@ export class AuthService {
 
 
 
-  constructor(private router: Router) {
+  constructor(public router: Router) {
 
 
   }

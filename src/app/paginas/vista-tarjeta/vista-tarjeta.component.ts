@@ -17,7 +17,7 @@ export class VistaTarjetaComponent implements OnInit {
 
   }
 
-  constructor(private authService: AuthService) {
+  constructor(public authService: AuthService) {
 
   }
 

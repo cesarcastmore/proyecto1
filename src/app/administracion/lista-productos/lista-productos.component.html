@@ -1,3 +1,6 @@
+<div class="input-group mb-3" [formGroup]="buscarForm">
+  <input type="text" class="form-control" formControlName="termino">
+</div>
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -8,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let u of usuarios">
+    <tr *ngFor="let u of usuarios | buscar: buscarForm.value.termino">
       <th scope="row">{{ u.id }}</th>
       <td>{{ u.nombre }}</td>
       <td>{{ u.apellido }}</td>

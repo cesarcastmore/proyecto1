@@ -30,6 +30,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { VistaObservadorComponent } from './paginas/vista-observador/vista-observador.component';
 import { VistaEditarUsuarioComponent } from './paginas/vista-editar-usuario/vista-editar-usuario.component';
+//import { BuscarPipe } from './pipes/buscar.pipe';
+import { SpinnerService } from './spinner.service';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +58,8 @@ import { VistaEditarUsuarioComponent } from './paginas/vista-editar-usuario/vist
     VistaAgregarUsuarioComponent,
     VistaUsuariosComponent,
     VistaObservadorComponent,
-    VistaEditarUsuarioComponent
+    VistaEditarUsuarioComponent,
+    //BuscarPipe
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,7 @@ import { VistaEditarUsuarioComponent } from './paginas/vista-editar-usuario/vist
     ModalModule.forRoot(),
     ReactiveFormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, SpinnerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
