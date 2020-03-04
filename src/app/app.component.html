@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-3" [hidden]="!authService.activo">
+  <div [ngClass]="{'col-md-3': abierto , '': !abierto }" [hidden]="!authService.activo || !abierto">
     <ul class="list-group">
       <a class="list-group-item" routerLink="/componentes/componentes">Componentes</a>
       <a class="list-group-item" routerLink="/directivas/ciclo">Ciclo</a>
@@ -11,15 +11,12 @@
       <a class="list-group-item" routerLink="rutas/anidadas">Rutas Anidadas</a>
       <a class="list-group-item" routerLink="usuarios">Usuarios</a>
       <a class="list-group-item" routerLink="observador">Observador</a>
+      <a class="list-group-item" routerLink="productos">Productos</a>
     </ul>
   </div>
-  <div class="col-md-9" [ngClass]="{'col-md-9':authService.activo, 'col-md-12': !authService.activo }">
+  <div class="col-md-9" [ngClass]="{'col-md-9':authService.activo , 'col-md-12': !authService.activo || !abierto }">
+    <app-header *ngIf="authService.activo" (onSignOut)="authService.salir()" (onClickMenu)="abierto= !abierto"></app-header>
     <app-spinner></app-spinner>
-    <ul class="nav justify-content-end" [hidden]="!authService.activo">
-      <li class="nav-item">
-        <button class="btn btn-success" (click)="authService.salir()">Salir</button>
-      </li>
-    </ul>
     <router-outlet></router-outlet>
   </div>
 </div>

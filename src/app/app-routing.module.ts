@@ -21,7 +21,7 @@ import { VistaUsuariosComponent } from './paginas/vista-usuarios/vista-usuarios.
 import { VistaObservadorComponent } from './paginas/vista-observador/vista-observador.component';
 
 import { VistaEditarUsuarioComponent } from './paginas/vista-editar-usuario/vista-editar-usuario.component';
-
+import { VistaProductosComponent } from './paginas/vista-productos/vista-productos.component';
 const routes: Routes = [{
     path: '',
     redirectTo: 'login',
@@ -91,6 +91,10 @@ const routes: Routes = [{
   {
     path: 'observador',
     component: VistaObservadorComponent
+  },
+  {
+    path: 'productos',
+    component: VistaProductosComponent
   }
 ];
 

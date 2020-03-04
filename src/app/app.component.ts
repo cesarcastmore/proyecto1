@@ -11,6 +11,8 @@ import { AuthService} from './auth.service';
 export class AppComponent implements OnInit {
   title = 'proyecto1';
 
+  public abierto: boolean= false;
+
   constructor(public authService: AuthService){
 
   }
@@ -41,12 +43,12 @@ export class AppComponent implements OnInit {
     }
 
     var resultado = document.getElementById("resultado");
-    resultado.innerHTML = objecto1.nombre;
+    //resultado.innerHTML = objecto1.nombre;
 
-    resultado.innerHTML = objecto2['nombre'];
+    //resultado.innerHTML = objecto2['nombre'];
 
     let atributo: string = "apellido";
-    resultado.innerHTML = objecto1[atributo];
+    //resultado.innerHTML = objecto1[atributo];
 
     let nulo: string = null;
     let fecha: Date = new Date();
@@ -73,7 +75,7 @@ export class AppComponent implements OnInit {
     }
 
     usuario.setNombre("Felipe");
-    resultado.innerHTML = usuario.getNombre();
+    //resultado.innerHTML = usuario.getNombre();
 
 
     for (let i = 0; i < arreglo2.length; i++) {
@@ -181,11 +183,6 @@ export class AppComponent implements OnInit {
 
     let porcentaje= alcohol.getPorcentajeAlcohol();
     
-
-
-
-
-
 
 
     //">", "<", ">=", "<="

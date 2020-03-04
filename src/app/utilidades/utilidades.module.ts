@@ -5,6 +5,8 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PieComponent } from './pie/pie.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { HeaderComponent } from './header/header.component';
+import { PestaniaComponent } from './pestania/pestania.component';
 
 
 
@@ -12,11 +14,11 @@ import { SpinnerComponent } from './spinner/spinner.component';
   declarations: [TarjetaComponent,
     EncabezadoComponent,
     CuerpoComponent,
-    PieComponent, SpinnerComponent
+    PieComponent, SpinnerComponent, HeaderComponent, PestaniaComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [TarjetaComponent, SpinnerComponent]
+  exports: [TarjetaComponent, SpinnerComponent, HeaderComponent, PestaniaComponent]
 })
 export class UtilidadesModule {}

@@ -32,6 +32,7 @@ import { VistaObservadorComponent } from './paginas/vista-observador/vista-obser
 import { VistaEditarUsuarioComponent } from './paginas/vista-editar-usuario/vista-editar-usuario.component';
 //import { BuscarPipe } from './pipes/buscar.pipe';
 import { SpinnerService } from './spinner.service';
+import { VistaProductosComponent } from './paginas/vista-productos/vista-productos.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { SpinnerService } from './spinner.service';
     VistaUsuariosComponent,
     VistaObservadorComponent,
     VistaEditarUsuarioComponent,
+    VistaProductosComponent,
     //BuscarPipe
   ],
   imports: [
