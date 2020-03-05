@@ -34,6 +34,7 @@ import { VistaEditarUsuarioComponent } from './paginas/vista-editar-usuario/vist
 import { SpinnerService } from './spinner.service';
 import { VistaProductosComponent } from './paginas/vista-productos/vista-productos.component';
 
+import { ProductosModule} from './productos/productos.module';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { VistaProductosComponent } from './paginas/vista-productos/vista-product
     UtilidadesModule,
     AdministracionModule,
     ModalModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ProductosModule
   ],
   providers: [AuthService, SpinnerService],
   bootstrap: [AppComponent]

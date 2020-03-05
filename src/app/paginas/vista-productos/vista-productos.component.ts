@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaProductosComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+  public pestanias: any[] = [{
+    identificador: 'Comentarios',
+    titulo: 'Comentarios de Usuarios'
+  }, {
+    identificador: 'Detalles',
+    titulo: 'Detalles y Caracteristicas del Producto'
+  }, {
+    identificador: 'Similares',
+    titulo: 'Lo mas buscado'
+  }]
+
+  public identificador: string='Comentarios';
+
+
+
+
+  constructor() {}
+
+  ngOnInit() {}
 
 }
